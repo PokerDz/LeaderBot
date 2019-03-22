@@ -578,9 +578,8 @@ if(command === `${prefix}message`) {
     message.reply("** :white_check_mark: , Sent a Message to **<@"+toSend.id+">")
  }
 });
-  
-   client.on("message", msg => {
-           var prefix = "f";
+client.on("message", msg => {
+           var prefix = "#";
   if(msg.content.startsWith (prefix + "id")) {
     if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
       const embed = new Discord.RichEmbed();
@@ -598,7 +597,6 @@ if(command === `${prefix}message`) {
       msg.channel.send({embed: embed})
   }
 });
-
 client.on('message', message => {
     if(message.content == '#member') {
     const embed = new Discord.RichEmbed()
