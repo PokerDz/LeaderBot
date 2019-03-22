@@ -581,8 +581,8 @@ if(command === `${prefix}message`) {
 client.on("message", msg => {
            var prefix = "#";
   if(msg.content.startsWith (prefix + "id")) {
-    if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
-      const embed = new Discord.RichEmbed();
+
+const embed = new Discord.RichEmbed();
   embed.addField(":cloud_tornado:  الاسم", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
           .addField(":id:  الايدي", `**[ ${msg.author.id} ]**`, true)
           .setColor("RANDOM")
